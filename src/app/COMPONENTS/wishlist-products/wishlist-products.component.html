@@ -1,0 +1,27 @@
+<div class="wishlist_products">
+    <p class="price">Price</p>
+    <div class="wishlist_product" *ngFor="let product of wishlist_products">
+        <img src="{{product.image}}" alt="" class="wishlist_product_img">
+        <div class="wishlist_product_info">
+
+            <p class="wishlist_product_title">
+                {{product.title}}
+            </p>
+            <p class="wishlist_product_in_stock">Available</p>
+            <div class="wishlist_options">
+                <!-- <a (click)="removeItem(product)">Delete from Wishlist</a> -->
+                <button (click)="removeItem(product)"><span>Delete from Wishlist</span></button>
+            </div>
+
+        </div>
+        <div class="wishlist_products_price">
+            <p> <strong> ₹&nbsp;{{product.price}}</strong> </p>
+        </div>
+
+    </div>
+    <!-- <div class="wishlist_products_subtotal">
+        <p>Subtotal ({{wishlist_service.get}} items):
+            <strong>₹{{wishlist_service.getTotal()}}</strong>
+        </p>
+    </div> -->
+</div>

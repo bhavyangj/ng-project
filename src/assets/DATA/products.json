@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "title": "Learning with Python",
+        "desc": "The book is designed to introduce the important concepts of Python programming language in detail.",
+        "price": 314.00,
+        "image": "https://images-na.ssl-images-amazon.com/images/I/51R9msLhVrL.jpg",
+        "ratings": 4
+    },
+    {
+        "id": 2,
+        "title": "Data Analytics using Python",
+        "desc": "Data is the fuel of 21st century. The advanced technological development has brought a massive increase in the volume and spectrum of data by including text, image and video data",
+        "price": 600.00,
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71zTHzSnRGL.jpg",
+        "ratings": 5
+    },
+    {
+        "id": 3,
+        "title": "Angular 9: Dynamic Web Apps",
+        "desc": "Pro Angular 9: Build Powerful and Dynamic Web Apps 4th ed. Edition",
+        "price": 500,
+        "image": "https://images-na.ssl-images-amazon.com/images/I/418hZfmNkXL._SX348_BO1,204,203,200_.jpg",
+        "ratings": 3
+    },
+    {
+        "id": 4,
+        "title": "Python Programming",
+        "desc": "Python Programming introduces one of the most rapidly evolving and preferred programming language using the concept of modularity.",
+        "price": 53.00,
+        "image": "https://images-na.ssl-images-amazon.com/images/I/91RD+ZSBvhL.jpg",
+        "ratings": 5
+    },
+    {
+        "id": 5,
+        "title": "Python Programming: Using Problem Solving Approach",
+        "desc": "Python Programming is designed as a textbook to fulfil the requirements of the first-level course in Python programming.",
+        "price": 54.36,
+        "image": "https://images-na.ssl-images-amazon.com/images/I/41-W3W0t02L.jpg",
+        "ratings": 2
+    },
+    {
+        "id": 6,
+        "title": "Learning with Python",
+        "desc": "The book is designed to introduce the important concepts of Python programming language in detail.",
+        "price": 314.00,
+        "image": "https://images-na.ssl-images-amazon.com/images/I/51R9msLhVrL.jpg",
+        "ratings": 4
+    },
+    {
+        "id": 7,
+        "title": "Data Analytics using Python",
+        "desc": "Data is the fuel of 21st century. The advanced technological development has brought a massive increase in the volume and spectrum of data by including text, image and video data",
+        "price": 600.00,
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71zTHzSnRGL.jpg",
+        "ratings": 5
+    },
+    {
+        "id": 8,
+        "title": "Pro Angular 9: Dynamic Web Apps",
+        "desc": "Pro Angular 9: Build Powerful and Dynamic Web Apps 4th ed. Edition",
+        "price": 500,
+        "image": "https://images-na.ssl-images-amazon.com/images/I/418hZfmNkXL._SX348_BO1,204,203,200_.jpg",
+        "ratings": 3
+    },
+    {
+        "id": 9,
+        "title": "Data Analytics using Python",
+        "desc": "Data is the fuel of 21st century. The advanced technological development has brought a massive increase in the volume and spectrum of data by including text, image and video data",
+        "price": 600.00,
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71zTHzSnRGL.jpg",
+        "ratings": 5
+    },
+    {
+        "id": 10,
+        "title": "Pro Angular 9: Build Powerful and Dynamic Web Apps",
+        "desc": "Pro Angular 9: Build Powerful and Dynamic Web Apps",
+        "price": 500,
+        "image": "https://images-na.ssl-images-amazon.com/images/I/418hZfmNkXL._SX348_BO1,204,203,200_.jpg",
+        "ratings": 3
+    }
+]

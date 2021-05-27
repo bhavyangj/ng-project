@@ -1,0 +1,133 @@
+.header{
+  position: sticky;
+  z-index: 100;
+  top: 0;
+}
+.header_top{
+    height: 60px;
+    background-color: #232f3e;
+    font-size: 14px;
+    display:flex;
+    color:white;
+    padding-right:8px;
+    padding-bottom: 8px;
+}
+.header_menu {
+    display: flex;
+    padding: 10px 8px 8px 8px;
+    width: 100%;
+}
+.header_menu > div{
+    margin: 8px;
+}
+.header_menu_icon > mat-icon{
+    font-size: 30px;
+    align-items: center;
+}
+.store_icon{
+    font-size: 30px;
+    margin: 0 10px;
+    color:#7bd651;
+}
+.header_menu_searchbar{
+    display: flex;
+    width: 500px;
+    height: 40px;
+    justify-content:center;
+    flex: 1;
+}
+.header_menu_input{
+    /* height: px; */
+    padding: 10px;
+    border: none;
+    width: 50%;
+    border-radius: 20px 0px 0px 20px;
+}
+.header_menu_searchbar_icon{
+    background-color: #7bd651;
+    /* height: 40px; */
+    width: 40px;
+    color:black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 0px 20px 20px 0px;
+}
+.header_menu_logo{
+    object-fit: contain;
+    display: flex;
+    flex-direction: row;
+    /* width: 275px; */
+    margin: 3px 5px;
+    padding-left: 10px;
+}
+.header_menu_logo > h1{
+    margin-left:10px;
+
+}
+
+.header_menu_signin{
+    display: flex;
+    width: 70px;
+    flex-direction: column;
+}
+.header_menu_top_item{
+    font-size: 12px;
+    color: lightgray;
+}
+.header_menu_bottom_item{
+    font-size: 14px;
+    /* font-weight: bold; */
+}
+.header_menu_cart{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 8px;
+    height: 50px;
+    justify-content: space-around;
+}
+.header_cart_number{
+    margin: 0 0 18px 2px;
+    padding: 2px 3px;
+    /* background-color: #7bd651; */
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+}
+.header_bottom{
+    height: 49px;
+    display: flex;
+    flex-direction: row;
+    background-color: #232f3e;
+    /* padding-top: 5px;
+    padding-bottom: 5px; */
+    padding-left: 8px;
+    font-size: 12px;
+}
+
+.header_bottom_text{
+    margin: 20px;
+    color: white;
+    font-size: 16px;
+}
+.header_bottom_location_text{
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.header_left_line_two{
+    font-size: 15px;
+}
+.header_bottom_category{
+    color: white;
+    padding: 10px;
+    padding-bottom: 0;
+    margin: auto 15px;
+    border: none;
+    border-radius: 10px;
+}
+.header_bottom_category:hover{
+    color: #7bd651;
+    background-color: #303842;
+    margin: auto 15px;
+}

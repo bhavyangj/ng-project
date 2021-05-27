@@ -1,0 +1,77 @@
+.products{
+    display: flex;
+    padding:0;
+    margin:0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+img{
+    margin: 20px;
+}
+.product > mat-card > img{
+    object-fit: contain;
+    height: 200px;
+}
+.product > mat-card{
+    display: flex;
+    flex-direction: column;
+    min-height: 350px;
+    width: 300px;
+    margin: 20px;
+    background-color: #e9ebec;
+    border: .5px solid rgb(170, 166, 166);
+    border-radius: 5px;
+    align-items: center;
+}
+/* .product > mat-card > button{
+    margin-top: 10px;
+    padding: 7px;
+    color: bisque;
+    background-color: #232f3e;
+    border: none;
+    border-radius: 5px;
+    /* border-color: #a88134 #9c7e31 #846a29; 
+} */
+.button {
+  border-radius: 4px;
+  background-color: #232f3e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+  padding: 8px;
+  width: 140px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  /* content: '\00bb'; */
+  content: '\002b';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+  color: #7bd651;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.mat-form-field {
+  margin-right: 8px;
+}

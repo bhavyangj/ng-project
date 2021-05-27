@@ -1,0 +1,18 @@
+<div class="checkout">
+    <div class="checkout_left">
+        <div class="checkout_empty" *ngIf="wishlist.getWishlistLength() == 0; else elseblock">
+            <h2>Your wishlist is empty</h2>
+            <p>You have no items in your wishlist to display</p>
+
+        </div>
+        <ng-template #elseblock>
+            <div class="checkout_not_empty">
+                <span>
+                    <mat-icon>heart</mat-icon>
+                    <h1>&nbsp;Wishlist Items</h1>
+                </span>
+                <app-wishlist-products [wishlist_products] = "items" (deleteEvent)="deleteEventHandler($event)"></app-wishlist-products>
+            </div>
+        </ng-template>
+    </div>
+</div>

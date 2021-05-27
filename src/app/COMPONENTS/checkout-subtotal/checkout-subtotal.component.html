@@ -1,0 +1,6 @@
+<div class="subtotal" *ngIf="shopping_cart_service.getCartLength() > 0">
+    <p>Subtotal: ({{shopping_cart_service.getCartLength()}} items)
+        <strong>₹{{shopping_cart_service.getTotal()}}</strong>
+    </p>
+    <button routerLink="/complete-checkout" (click)="OrderItems()">checkout</button>
+</div>

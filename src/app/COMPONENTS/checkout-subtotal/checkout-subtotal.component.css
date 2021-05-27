@@ -1,0 +1,29 @@
+.subtotal{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    width: 300px;
+    /* height: 100px; */
+    padding: 20px;
+    background-color: #f3f3f3;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin: 20px;
+}
+.subtotal > p{
+    font-size: 20px!important;
+    line-height: 1.255!important;
+}
+button {
+    border-radius: 4px;
+    background-color: #232f3e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 14px;
+    padding: 8px;
+    width: 120px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}

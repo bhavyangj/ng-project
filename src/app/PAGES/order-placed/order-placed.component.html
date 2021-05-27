@@ -1,0 +1,17 @@
+<div class="checkout">
+    <div class="checkout_left">
+        <div class="checkout_empty" *ngIf="orderlist.getOrderLength() == 0; else elseblock">
+            <h2>Your ordered list is empty</h2>
+            <p>You have no items in your ordered list to display</p>
+        </div>
+        <ng-template #elseblock>
+            <div class="checkout_not_empty">
+                <span>
+                    <mat-icon>heart</mat-icon>
+                    <h1>&nbsp;Your Ordered Items</h1>
+                </span>
+                <app-ordered-products [ordered_products] = "items" (deleteEvent)="deleteEventHandler($event)"></app-ordered-products>
+            </div>
+        </ng-template>
+    </div>
+</div>

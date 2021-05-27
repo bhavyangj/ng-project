@@ -1,0 +1,21 @@
+<div class="checkout">
+    <div class="checkout_left">
+        <div class="checkout_empty" *ngIf="shopping_cart.getCartLength() == 0; else elseblock">
+            <h2>Your shopping cart is empty</h2>
+            <p>You have no items in your cart to display</p>
+
+        </div>
+        <ng-template #elseblock>
+            <div class="checkout_not_empty">
+                <span>
+                    <mat-icon>shopping_cart</mat-icon>
+                    <h1>&nbsp;Cart Items</h1>
+                </span>
+                <app-checkout-products [checkout_products] = "items" (deleteEvent)="deleteEventHandler($event)"></app-checkout-products>
+            </div>
+        </ng-template>
+    </div>
+    <!-- <div class="checkout_right">
+        <app-checkout-subtotal></app-checkout-subtotal>
+    </div> -->
+</div>
