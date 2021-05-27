@@ -1,5 +1,5 @@
 {
-  "name": "local-store",
+  "name": "mystore",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
