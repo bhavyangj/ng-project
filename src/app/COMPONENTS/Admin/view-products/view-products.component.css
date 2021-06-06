@@ -1,0 +1,90 @@
+.vertical-menu {
+    width: 200px;
+    margin: 50px;
+  }
+  
+  .vertical-menu a {
+    background-color: #eee;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+  }
+  
+  .vertical-menu a:hover {
+    background-color: #ccc;
+  }
+  
+  .vertical-menu a.active {
+    background-color: #232f3e;
+    color: white;
+  }
+
+  /* table{
+    width: 500px;
+  }
+  td{
+    width: 250px;
+  } */
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+    margin: 50px 0 20px 0;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  button {
+    border-radius: 4px;
+    background-color: #232f3e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 12px;
+    padding: 4px;
+    width: 80px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 4px;
+  }
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  #updatebtn span:after{
+    content: '\21EA';
+  }
+  #deletebtn span:after{
+    /* content: '\2297'; */
+    /* content: '\2573'; */
+    content: '\2718';
+  }
+  .button span:after {
+    /* content: '\007F'; */
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -0px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 18px;
+    color: #7bd651;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }

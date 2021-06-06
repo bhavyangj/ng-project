@@ -1,0 +1,22 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row" *ngFor="let item of products">
+        <ng-container *ngIf="item.id==bindId">
+            <div class="col-5">
+                <img class="product-img" src="{{item.image}}" alt="...">
+            </div>
+            <div class="col-5">
+                <div class="container my-3">
+                    
+                    <h4 class="card-title">{{item.title}}</h4>
+                    <div>price:  ₹ <strong>{{item.price}}</strong></div>
+                    <p>
+                        {{item.desc}}
+                    </p>
+                    <a RouterLink="/" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
+<app-footer></app-footer>

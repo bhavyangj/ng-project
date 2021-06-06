@@ -1,11 +1,163 @@
-<div class="products">
-    <div class="product" *ngFor="let item of products">
-        <mat-card>
-            <img src={{item.image}}>
-            <strong>{{item.title}}</strong>
-            <p>Price: ₹ <strong>{{item.price}}</strong></p>
-            <button class="button" (click)="addToCart(item)"><span>Add to cart</span></button>
-            <button class="button" (click)="addToWishlist(item)"><span>Add to wishlist</span></button>
-        </mat-card>
+<!-- <div class="row"> -->
+<!-- <div class="col-1"> -->
+<!-- <app-filter></app-filter> -->
+<!-- </div> -->
+<div class="row">
+    <div class="col-1 card">
+
+        <article class="card-group-item">
+            <header class="card-header">
+                Filters
+                <mat-icon id="defaultbtn" (click)="setdefaultfilter()">settings_backup_restore</mat-icon>
+            </header>
+            <!-- <mat-card class="example-result-card">
+                    <mat-card-content>
+                        <p>Price range</p>
+                        <mat-slider class="example-margin" [max]="max"
+                            [min]="min" [step]="step" [thumbLabel]="thumbLabel"
+                            [value]="value" aria-labelledby="example-name-label">
+                        </mat-slider>   
+                    </mat-card-content>
+                </mat-card> -->
+            <div class="filter-content">
+                <div class="card-body">
+                    <form>
+                        <!-- <div class="range"> -->
+                            <p>Price Range:</p>
+                        <!-- </div> -->
+                        <!-- <span style="right:0">set to default</span> -->
+                        <div class="range">
+                            from: <input class="range_input" type="number" placeholder="value" name="from"
+                                [(ngModel)]="min">
+                            to: <input class="range_input" type="number" placeholder="value" name="to"
+                                [(ngModel)]="max">
+                        </div>
+                        <br>
+                        <!-- <button class="button find" (click)="setpricerange()">find</button> -->
+                        <!-- 0 <input type="range" [(ngModel)]="value"> 1000 -->
+                    </form>
+
+                </div>
+            </div>
+        </article>
+        <article class="card-group-item">
+            <header class="card-header">
+                Search Products
+            </header>
+            <div class="filter-content">
+                <div class="card-body">
+                    <form>
+                        <div class="search">
+                            <input class="search_input" type="text" placeholder="find Products ..." name="from"
+                                [(ngModel)]="searchText" (ngModelChange)="searchGo()">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </article>
+
+        <article class="card-group-item">
+            <header class="card-header">
+                rating: {{this.rating}}+
+            </header>
+            <div class="filter-content">
+                <div class="card-body">
+                    <div class="rating" (click)="setrating(4)">
+                        <mat-icon>star</mat-icon>
+                        <mat-icon>star</mat-icon>
+                        <mat-icon>star</mat-icon>
+                        <mat-icon>star</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                        & Up
+                    </div>
+                    <div class="rating" (click)="setrating(3)">
+                        <mat-icon>star</mat-icon>
+                        <mat-icon>star</mat-icon>
+                        <mat-icon>star</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                        & Up
+                    </div>
+                    <div class="rating" (click)="setrating(2)">
+                        <mat-icon>star</mat-icon>
+                        <mat-icon>star</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                        & Up
+                    </div>
+                    <div class="rating" (click)="setrating(1)">
+                        <mat-icon>star</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                        & Up
+                    </div>or
+                    <span class="viewall" (click)="setrating(1)">view all</span>
+                </div>
+            </div>
+        </article>
+        <article class="card-group-item">
+            <header class="card-header">
+                Category
+                <!-- <mat-icon id="defaultbtn" (click)="category()">settings_backup_restore</mat-icon> -->
+            </header>
+            <div class="filter-content">
+                <div class="card-body">
+                    <p (click)="selectall()" style="cursor: pointer">Clear selection</p>
+                    <input type="checkbox" [(ngModel)]="filter.electronics" (ngModelChange)="filterCategory()"
+                        id="Category" name="Category" placeholder="Electronics">&nbsp; Electronics
+                    <br><input type="checkbox" [(ngModel)]="filter.books" (ngModelChange)="filterCategory()"
+                        id="Category" name="Category">&nbsp; Books
+                    <br><input type="checkbox" [(ngModel)]="filter.computers" (ngModelChange)="filterCategory()"
+                        id="Category" name="Category">&nbsp; Computers
+                    <br><input type="checkbox" [(ngModel)]="filter.fashion" (ngModelChange)="filterCategory()"
+                        id="Category" name="Category">&nbsp; Fashion
+                    <br><input type="checkbox" [(ngModel)]="filter.mobiles" (ngModelChange)="filterCategory()"
+                        id="Category" name="Category">&nbsp; Mobiles
+                    <br><input type="checkbox" [(ngModel)]="filter.beauty" (ngModelChange)="filterCategory()"
+                        id="Category" name="Category">&nbsp; Beauty
+                    <!-- <br><input type="checkbox" [(ngModel)]="filter.mens" (ngModelChange)="filterCategory()" id="Category" name="Category" >&nbsp; Home & Kichen -->
+                </div>
+            </div>
+        </article>
     </div>
+    <div class="col products" *ngIf="searchproducts?.length == 0; else searchresult">
+        <!-- <ng-template *ngIf="this.searchproducts.length!=0; else searchblock"> -->
+        <!-- <ng-template > -->
+        <div class="product" *ngFor="let item of filteredProducts">
+            <mat-card *ngIf="item.ratings>=rating && item.price>=min && max>=item.price">
+                <img src={{item.image}}>
+                <a (click)="onClick(item)">{{item.title}}</a>
+                <p>Price: ₹ <strong>{{item.price}}</strong></p>
+                <p>rating: <strong>{{item.ratings}}</strong></p>
+                <button class="button" id="addtocartbtn" (click)="addToCart(item)"><span>Add to cart</span></button>
+                <button class="button" id="wishlistbtn" (click)="addToWishlist(item)"><span>Add to
+                        wishlist</span></button>
+            </mat-card>
+        </div>
+        <!-- </ng-template> -->
+        <!-- <div #noresult>
+            No result Found
+        </div> -->
+
+
+
+    </div>
+    <ng-template #searchresult>
+        <div class="col products" >
+            <div class="product" *ngFor="let item of searchproducts">
+                <mat-card *ngIf="item.ratings>=rating && item.price>=min && max>=item.price">
+                    <img src={{item.image}}>
+                    <a (click)="onClick(item)">{{item.title}}</a>
+                    <p>Price: ₹ <strong>{{item.price}}</strong></p>
+                    <p>rating: <strong>{{item.ratings}}</strong></p>
+                    <button class="button" (click)="addToCart(item)"><span>Add to cart</span></button>
+                    <button class="button" (click)="addToWishlist(item)"><span>Add to wishlist</span></button>
+                </mat-card>
+            </div>
+        </div>
+    </ng-template>
 </div>
+<!-- </div> -->

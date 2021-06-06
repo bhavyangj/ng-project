@@ -2,8 +2,30 @@
     /* align-items: right; */
     text-align: right;
 }
+.quantity{
+    display: flex;
+    flex-direction: row;
+    width: 82px;
+    font-size: 14px;
+}
+.quantity mat-icon{
+    margin: 0 5px;
+    font-size:15px;
+    background-color: #232f3e;
+    border: none;
+    border-radius: 25px;
+    padding: 2px 2px 0 0;
+    width: 20px;
+    color: white;
+}
+.quantity mat-icon:hover{
+    cursor: pointer;
+    background-color: #7bd651;
+    font-weight: bold;
+}
 .checkout_products{
-    width: 100%;;
+    width: 100%;
+    margin-bottom: 50px;
 }
 .checkout_product{
     border-top: solid 1px rgb(219, 218, 218);

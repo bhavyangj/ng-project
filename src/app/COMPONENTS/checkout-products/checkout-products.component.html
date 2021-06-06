@@ -15,10 +15,14 @@
                 <button (click)="removeItem(product)"><span>Delete</span></button>
                 <button (click)="addToWishlist(product)"><span>Move to wishlist</span></button>
             </div>
-
         </div>
         <div class="checkout_products_price">
-            <p> <strong>₹{{product.price}}</strong> </p>
+            <p> <strong>₹{{product.price}}</strong></p>
+            <div class="quantity">
+                <span><mat-icon (click)="IncQuantity(product, checkout_products)">add</mat-icon></span>
+                <span>&nbsp;x {{product.quantity}}</span>
+                <span><mat-icon (click)="DcrQuantity(product, checkout_products)">remove</mat-icon></span>
+            </div>
         </div>
 
     </div>

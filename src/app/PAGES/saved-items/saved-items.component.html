@@ -1,12 +1,13 @@
-<div class="checkout">
-    <div class="checkout_left">
-        <div class="checkout_empty" *ngIf="wishlist.getWishlistLength() == 0; else elseblock">
+<app-header></app-header>
+<div class="wishlist">
+    <div class="wishlist_left">
+        <div class="wishlist_empty" *ngIf="wishlist.getWishlistLength() == 0; else elseblock">
             <h2>Your wishlist is empty</h2>
             <p>You have no items in your wishlist to display</p>
 
         </div>
         <ng-template #elseblock>
-            <div class="checkout_not_empty">
+            <div class="wishlist_not_empty">
                 <span>
                     <mat-icon>heart</mat-icon>
                     <h1>&nbsp;Wishlist Items</h1>
@@ -16,3 +17,4 @@
         </ng-template>
     </div>
 </div>
+<app-footer></app-footer>

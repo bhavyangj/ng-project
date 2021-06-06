@@ -2,8 +2,9 @@
     {
         "id": 1,
         "title": "Learning with Python",
-        "category": "Books",
+        "category": "books",
         "desc": "The book is designed to introduce the important concepts of Python programming language in detail.",
+        "quantity": 1,
         "price": 314.00,
         "image": "https://images-na.ssl-images-amazon.com/images/I/51R9msLhVrL.jpg",
         "ratings": 4
@@ -11,8 +12,9 @@
     {
         "id": 2,
         "title": "Data Analytics using Python",
-        "category": "Books",
+        "category": "books",
         "desc": "Data is the fuel of 21st century. The advanced technological development has brought a massive increase in the volume and spectrum of data by including text, image and video data",
+        "quantity": 1,
         "price": 600.00,
         "image": "https://images-na.ssl-images-amazon.com/images/I/71zTHzSnRGL.jpg",
         "ratings": 5
@@ -20,8 +22,9 @@
     {
         "id": 3,
         "title": "Angular 9: Dynamic Web Apps",
-        "category": "Books",
+        "category": "books",
         "desc": "Pro Angular 9: Build Powerful and Dynamic Web Apps 4th ed. Edition",
+        "quantity": 1,
         "price": 500,
         "image": "https://images-na.ssl-images-amazon.com/images/I/418hZfmNkXL._SX348_BO1,204,203,200_.jpg",
         "ratings": 3
@@ -29,8 +32,9 @@
     {
         "id": 4,
         "title": "Python Programming",
-        "category": "Books",
+        "category": "books",
         "desc": "Python Programming introduces one of the most rapidly evolving and preferred programming language using the concept of modularity.",
+        "quantity": 1,
         "price": 53.00,
         "image": "https://images-na.ssl-images-amazon.com/images/I/91RD+ZSBvhL.jpg",
         "ratings": 5
@@ -38,55 +42,201 @@
     {
         "id": 5,
         "title": "Python Programming: Using Problem Solving Approach",
-        "category": "Books",
+        "category": "books",
         "desc": "Python Programming is designed as a textbook to fulfil the requirements of the first-level course in Python programming.",
+        "quantity": 1,
         "price": 54.36,
         "image": "https://images-na.ssl-images-amazon.com/images/I/41-W3W0t02L.jpg",
         "ratings": 2
     },
     {
-        "id": 6,
-        "title": "Learning with Python",
-        "category": "Books",
-        "desc": "The book is designed to introduce the important concepts of Python programming language in detail.",
-        "price": 314.00,
-        "image": "https://images-na.ssl-images-amazon.com/images/I/51R9msLhVrL.jpg",
-        "ratings": 4
+        "id": 12,
+        "title": "Men's Footwear",
+        "category": "fashion",
+        "desc": "Check out latest collections of branded shoes for men online at best prices from top brands like Nike, Puma, Reebok, Adidas, Woodland, Bata, Mi, Skechers, Fila, Sparx and much more. ",
+        "quantity": 1,
+        "price": 999,
+        "image": "https://amenvato.s3.us-east-2.amazonaws.com/envatoallproject/ammamarketinga296043e-68fd-4a8f-9739-e78cb9fd0c15.jpg",
+        "ratings": 3.9
     },
     {
-        "id": 7,
-        "title": "Data Analytics using Python",
-        "category": "Books",
-        "desc": "Data is the fuel of 21st century. The advanced technological development has brought a massive increase in the volume and spectrum of data by including text, image and video data",
-        "price": 600.00,
-        "image": "https://images-na.ssl-images-amazon.com/images/I/71zTHzSnRGL.jpg",
-        "ratings": 5
+        "id": 22,
+        "title": "Women's Footwear",
+        "category": "fashion",
+        "desc": "Heels",
+        "quantity": 1,
+        "price": 699,
+        "image": "https://www.heelscn.com/wp-content/uploads/Silver-Pointed-Toe-High-Heel-Pumps-Womens-Shoes.jpg",
+        "ratings": 4.1
     },
     {
-        "id": 8,
-        "title": "Pro Angular 9: Dynamic Web Apps",
-        "category": "Books",
-        "desc": "Pro Angular 9: Build Powerful and Dynamic Web Apps 4th ed. Edition",
-        "price": 500,
-        "image": "https://images-na.ssl-images-amazon.com/images/I/418hZfmNkXL._SX348_BO1,204,203,200_.jpg",
-        "ratings": 3
+        "id": 32,
+        "title": "Kids",
+        "category": "fashion",
+        "desc": "Kids’ love for toys is beyond any explanation. You can’t get enough of giggles when your little one plays with his/her favourite toy. Toys are also a great way to keep your kids happy and engaged. The right toy will help in improving your kids’ hand-eye coordination, creativity, imagination and motor skills. An online toy store has a vast range of toys to choose from. You can buy toys as per your kid’s age and interest. Popular brands like Barbie, Miss & Chief, Fisher-Price, Lego, Nerf and Mitashi have toys for all age groups.",
+        "quantity": 1,
+        "price": 1199,
+        "image": "https://gamesplusinc.com/wp-content/uploads/2015/12/2k17-1.jpeg",
+        "ratings": 4.6
     },
     {
-        "id": 9,
-        "title": "Data Analytics using Python",
-        "category": "Books",
-        "desc": "Data is the fuel of 21st century. The advanced technological development has brought a massive increase in the volume and spectrum of data by including text, image and video data",
-        "price": 600.00,
-        "image": "https://images-na.ssl-images-amazon.com/images/I/71zTHzSnRGL.jpg",
-        "ratings": 5
+        "id": 42,
+        "title": "Watches and accessories",
+        "category": "fashion",
+        "desc": "Check out latest collections of branded watches online at best prices on Flipkart from top brands like Fastrack, Citizen, Timex, Titan, Tag Heuer, Skmei, Casio, Sonata, Fossil and much more.",
+        "quantity": 1,
+        "price": 1495,
+        "image": "https://staticimg.titan.co.in/production/India/Fastrack/detail/38030PP02J.jpg",
+        "ratings": 4.8
     },
     {
-        "id": 10,
-        "title": "Pro Angular 9: Build Powerful and Dynamic Web Apps",
-        "category": "Books",
-        "desc": "Pro Angular 9: Build Powerful and Dynamic Web Apps",
-        "price": 500,
-        "image": "https://images-na.ssl-images-amazon.com/images/I/418hZfmNkXL._SX348_BO1,204,203,200_.jpg",
-        "ratings": 3
+        "id": 13,
+        "title": "Camera's",
+        "category": "electronics",
+        "desc": "Cameras, especially digital cameras, have become the rage in recent times. Most of the photography enthusiasts have armed themselves with dslr camera recently from brands like Canon, Nikon, Sony, GoPro cameras and are travelling to picturesque locations to capture stunning moments and convert them into photographic images. Although point and shoot cameras from Kodak and Sony are the still the preferred version of many expert photographers, digital cameras are the ones that have expanded the possibilities of experimenting with different styles of photography and help amateurs to click good pictures. Camera bags, tripods and lenses are significant accessories that photographers need to carry with them always.",
+        "quantity": 1,
+        "price": 42999,
+        "image": "https://images-na.ssl-images-amazon.com/images/I/61VFkA-rceL._SL1000_.jpg",
+        "ratings": 4.2
+    },
+    {
+        "id": 23,
+        "title": "Laptop's",
+        "category": "electronics",
+        "desc": "Sleek, compact, powerful laptops give you all the advantages of a desktop computer with added mobility and more. There are laptops for people who work on spreadsheets or presentations. For multimedia lovers, there are models with excellent screen resolution and speakers. There are also gaming laptops. Choose the best dell laptops that suits you. Looking for a particular brand? Flipkart has wide range of branded laptops like Lenovo, Acer, Apple, Asus, MSI, Dell you can browse and buy online shopping store.",
+        "quantity": 1,
+        "price": 64900,
+        "image": "https://wwrnet.com/pics/hp-pavilion-gaming-laptop-3.jpg",
+        "ratings": 4.6
+    },
+    {
+        "id": 33,
+        "title": "Tablets",
+        "category": "electronics",
+        "desc": "Tablets have successfully replaced Laptops and other forms of computers today owing to the portability factor and size of the device. Buying a tablet is a worthy investment as it can provide the same functionality as a normal computer, yet be easy to carry around and have longer battery life too. Apple iPads, Samsung tablets, Lenovo tablets, Asus tablets and the like are a range of these devices that are manufactured with great features and specifications to make your life easier. With all the essential features like Wi-Fi connectivity, Bluetooth, GPS and many more, these devices are a perfect way of having all that you want in a computer, yet giving instant access to information.",
+        "quantity": 1,
+        "price": 29900,
+        "image": "https://3g.co.uk/tinyimages/Apple/iPad_mini_4_2.jpg",
+        "ratings": 4.4
+    },
+    {
+        "id": 43,
+        "title": "Health and Personal Care - Thermometer",
+        "category": "electronics",
+        "desc": "Health & Personal Care Appliances",
+        "quantity": 1,
+        "price": 300,
+        "image": "https://www.healthklin.com/image/cache/catalog/PRODUCTIMAGES/omrnthm343f-750x750.jpg",
+        "ratings": 4.3
+    },
+    {
+        "id": 14,
+        "title": "Realme C17",
+        "category": "mobiles",
+        "desc": "Mobile phones are no more merely a part of our lives. Whether it's to stay connected with friends and family or to keep abreast of important developments around the world, mobiles are no longer for sending a text or making a call. From budget to state-of-the-art smartphones; indigenous names to global big-wigs - a whole universe of mobiles await you on Flipkart. Whether you’re looking for waterdrop notch screens, a high screen to body ratio, AI-powered sensational cameras, high storage capacity, blazing quick processing engines or reflective glass designs, rest assured you won’t have to venture anywhere else for your smartphone needs.",
+        "quantity": 1,
+        "price": 6799,
+        "image": "https://images-na.ssl-images-amazon.com/images/I/41QHt1HYUBS.jpg",
+        "ratings": 4.1
+    },
+    {
+        "id": 24,
+        "title": "Samsung Galaxy A9",
+        "category": "mobiles",
+        "desc": "Mobile phones are no more merely a part of our lives. Whether it's to stay connected with friends and family or to keep abreast of important developments around the world, mobiles are no longer for sending a text or making a call. From budget to state-of-the-art smartphones; indigenous names to global big-wigs - a whole universe of mobiles await you on Flipkart. Whether you’re looking for waterdrop notch screens, a high screen to body ratio, AI-powered sensational cameras, high storage capacity, blazing quick processing engines or reflective glass designs, rest assured you won’t have to venture anywhere else for your smartphone needs.",
+        "quantity": 1,
+        "price": 28930,
+        "image": "https://images-na.ssl-images-amazon.com/images/I/61RBq96%2Bm3L._SL1500_.jpg",
+        "ratings": 4.3
+    },
+    {
+        "id": 34,
+        "title": "Apple iphone 11",
+        "category": "mobiles",
+        "desc": "Mobile phones are no more merely a part of our lives. Whether it's to stay connected with friends and family or to keep abreast of important developments around the world, mobiles are no longer for sending a text or making a call. From budget to state-of-the-art smartphones; indigenous names to global big-wigs - a whole universe of mobiles await you on Flipkart. Whether you’re looking for waterdrop notch screens, a high screen to body ratio, AI-powered sensational cameras, high storage capacity, blazing quick processing engines or reflective glass designs, rest assured you won’t have to venture anywhere else for your smartphone needs.",
+        "quantity": 1,
+        "price": 51999,
+        "image": "https://www.wowcamera.com/assets/images/iphone_11_purple_00.jpg",
+        "ratings": 4.6
+    },
+    {
+        "id": 44,
+        "title": "Mi Redmi 9",
+        "category": "mobiles",
+        "desc": "Mobile phones are no more merely a part of our lives. Whether it's to stay connected with friends and family or to keep abreast of important developments around the world, mobiles are no longer for sending a text or making a call. From budget to state-of-the-art smartphones; indigenous names to global big-wigs - a whole universe of mobiles await you on Flipkart. Whether you’re looking for waterdrop notch screens, a high screen to body ratio, AI-powered sensational cameras, high storage capacity, blazing quick processing engines or reflective glass designs, rest assured you won’t have to venture anywhere else for your smartphone needs.",
+        "quantity": 1,
+        "price": 9182,
+        "image": "https://i01.appmifile.com/webfile/globalimg/in/cms/303D1336-249C-0113-DA94-01ED533069F8.jpg",
+        "ratings": 4.2
+    },
+    {
+        "id": 16,
+        "title": "Zebronics Wired Keyboard and Mouse Combo",
+        "category": "computers",
+        "desc": "Zebronics, FLAT RM 909J 9F TWO GRAND TOWER ,625 NATHAN ROAD KL HONG KONG",
+        "quantity": 1,
+        "price": 355,
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71XlOI9x%2BvL._SL1500_.jpg",
+        "ratings": 4.2
+    },
+    {
+        "id": 26,
+        "title": "Samsung 27 inch M5 Smart Monitor",
+        "category": "computers",
+        "desc": "27 inch Smart Monitor - 1,920 x 1,080 Resolution VA Monitor with HDR 10 MOBILE CONNECTIVITY: Wireless DeX unlocks a full PC experience. Use MOBILE productivity apps, such as video conferencing, documents, and browsers, through just your monitor and phone",
+        "quantity": 1,
+        "price": 21999,
+        "image": "https://images-na.ssl-images-amazon.com/images/I/51wieRVMF%2BL.jpg",
+        "ratings": 3.8
+    },
+    {
+        "id": 36,
+        "title": "D-Link DIR-2640, WiFi Router AC2600 MU-MIMO Dual Band",
+        "category": "computers",
+        "desc": "Works with the Google Assistant and Alexa – voice control with Google assistant or Alexa lets you manage your network without lifting a finger",
+        "quantity": 1,
+        "price": 7299,
+        "image": "https://images-na.ssl-images-amazon.com/images/I/516c1oZj8KL._SL1411_.jpg",
+        "ratings": 3.8
+    },
+    {
+        "id": 15,
+        "title": "Eyeshadow Revolution London",
+        "category": "beauty",
+        "desc": "Makeup Eyeshadow",
+        "quantity": 1,
+        "price": 950,
+        "image": "https://i.ebayimg.com/images/i/181671643247-0-1/s-l1000.jpg",
+        "ratings": 4.3
+    },
+    {
+        "id": 25,
+        "title": "Pantene Shampoo",
+        "category": "beauty",
+        "desc": "Haircare Shampoo",
+        "quantity": 1,
+        "price": 540,
+        "image": "https://outlet.sg/wp-content/uploads/2018/10/pantene-shampoo-hair-fall-control-750ml.jpg",
+        "ratings": 4.5
+    },
+    {
+        "id": 35,
+        "title": "Fragrances",
+        "category": "beauty",
+        "desc": "Jaguar Men Classic EDT",
+        "quantity": 1,
+        "price": 1914,
+        "image": "https://n1.sdlcdn.com/imgs/b/s/6/1017506_1-bd8d5.jpg",
+        "ratings": 4.6
+    },
+    {
+        "id": 45,
+        "title": "Nivea Body Lotion",
+        "category": "beauty",
+        "desc": "Skincare Body Lotion",
+        "quantity": 1,
+        "price": 234,
+        "image": "https://www.aozhoumama.com.au/images/CWH2641986-01.jpg",
+        "ratings": 4.2
     }
 ]

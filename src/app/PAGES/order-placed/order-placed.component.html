@@ -1,3 +1,4 @@
+<app-header></app-header>
 <div class="checkout">
     <div class="checkout_left">
         <div class="checkout_empty" *ngIf="orderlist.getOrderLength() == 0; else elseblock">
@@ -10,8 +11,10 @@
                     <mat-icon>heart</mat-icon>
                     <h1>&nbsp;Your Ordered Items</h1>
                 </span>
-                <app-ordered-products [ordered_products] = "items" (deleteEvent)="deleteEventHandler($event)"></app-ordered-products>
+                <app-ordered-products [ordered_products]="items" (deleteEvent)="deleteEventHandler($event)">
+                </app-ordered-products>
             </div>
         </ng-template>
     </div>
 </div>
+<app-footer></app-footer>

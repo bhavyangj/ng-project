@@ -1,1 +1,34 @@
-<p>login works!</p>
+<div class="login">
+    <div class="card">
+        <div class="userform">
+            <h1>Welcome Back!</h1>
+            <form>
+                <div class="row">
+                    <label for="Login as"></label><br>
+                    <mat-icon>person</mat-icon>
+                    <select name="login" id="login" (change)="selectauth($event)">
+                        <option value="Select Login As">Select Login As</option>
+                        <option value="Admin">Admin</option>
+                        <option value="User">User</option>
+                    </select>
+                </div>
+                <!-- <p><span>You selected: </span><b>{{auth}}</b></p> -->
+                <div class="row">
+                    <mat-icon>person</mat-icon>
+                    <input type="text" placeholder="Enter Username">
+                </div>
+                <div class="row">
+                    <mat-icon>lock</mat-icon>
+                    <input type="password" placeholder="Enter Password">
+                </div>
+                <button class="button" (click)="login()"><span>Login</span></button>
+                <!-- <button class="button" routerLink="/"><span>Login as User</span></button>
+                <button class="button" routerLink="/admin"><span>Login as Admin</span></button> -->
+            </form>
+        </div>
+    </div>
+    <!-- <div class="inner">
+        <div class="photo">
+        </div>
+    </div> -->
+</div>

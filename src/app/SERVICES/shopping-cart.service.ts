@@ -10,6 +10,7 @@ export class ShoppingCartService {
   
   getCartItems=()=>{
     let items = localStorage.getItem('shopping_cart')
+    // console.log("items: ", items)
     return JSON.parse(items)
   }
 
@@ -27,12 +28,12 @@ export class ShoppingCartService {
 
   
   getCartLength =()=>{
-    let items = this.getCartItems();
+    let items = this.getCartItems();  
     return items? this.getCartItems().length: 0
   }
   getTotal = ()=>{
     let items = this.getCartItems();
-    return items?.reduce((acc, item)=> acc+ item.price, 0)
+    return items?.reduce((acc, item)=> acc+ (item.price)*(item.quantity), 0)
   }
 
   removerItem=( product )=>{

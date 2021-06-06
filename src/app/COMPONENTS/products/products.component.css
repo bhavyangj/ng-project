@@ -1,9 +1,12 @@
 .products{
     display: flex;
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
     flex-wrap: wrap;
     justify-content: center;
+}
+.row{
+  margin: 300px 0;
 }
 img{
     margin: 20px;
@@ -11,6 +14,7 @@ img{
 .product > mat-card > img{
     object-fit: contain;
     height: 200px;
+    width: 200px;
 }
 .product > mat-card{
     display: flex;
@@ -22,6 +26,16 @@ img{
     border: .5px solid rgb(170, 166, 166);
     border-radius: 5px;
     align-items: center;
+}
+#defaultbtn{
+  background-color: #232f3e;
+  padding: 3px 0 0 2px;
+  border: none;
+  border-radius: 10px;
+  margin-left: 165px;
+}
+#defaultbtn:hover{
+  color: #7bd651;
 }
 /* .product > mat-card > button{
     margin-top: 10px;
@@ -52,10 +66,16 @@ img{
   position: relative;
   transition: 0.5s;
 }
+#addtocartbtn span:after{
+  content: '\002b';
+}
+#wishlistbtn span:after{
+  content: '\2764';
+}
 
 .button span:after {
   /* content: '\00bb'; */
-  content: '\002b';
+  /* content: '\002b'; */
   position: absolute;
   opacity: 0;
   top: 0;
@@ -72,6 +92,63 @@ img{
   opacity: 1;
   right: 0;
 }
+.range{
+  display: flex;
+  flex-direction: column;
+}
+.range_input{
+  border: 1px solid #7bd651;
+  margin: 0 10px;
+  border-radius: 5px;
+  width: 70%;
+}
+.search_input{
+  border: 1px solid #7bd651;
+  border-radius: 5px;
+  width: 70%;
+}
+.search_input:active{
+  border: 1px solid #232f3e;
+}
+.viewall:hover{
+  color: #232f3e;
+  font-weight: 700;
+}
 .mat-form-field {
   margin-right: 8px;
+}
+.mat-icon{
+  font-size: 18px;
+  margin:-2px;
+  padding: 0;
+  color: grey;
+}
+.rating:hover > .mat-icon, .rating:hover{
+  cursor: pointer;
+  color: gold;
+}
+.card{
+  width: 19%;
+  height: 20%;
+  /* opacity: 80%; */
+  padding:0;
+  /* border: .5px solid rgb(170, 166, 166); */
+  border: .5px solid #7bd651;
+  margin: 18px 0 0 30px;
+}
+.card-header{
+  background-color: #c0e0b2;
+}
+img{
+  height: min-content;
+  width: min-content;
+}
+.group-selection{
+  display: flex;
+  flex-direction: column;
+}
+.clearcategory:hover{
+  cursor: pointer;
+  color: #7bd651;
+
 }

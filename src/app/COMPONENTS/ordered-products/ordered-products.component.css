@@ -5,13 +5,15 @@
     font-size: larger;
 }
 .ordered_products{
-    margin: 50px;
+    margin: 10px 30px 30px 30px;
+    padding: 20px;
 }
 .ordered_product{
     border-top: solid 1px rgb(219, 218, 218);
     display: flex;
-    margin: 30px;
-    width: 50%;
+    margin: 10px;
+    padding: 5px 20px;
+    width: 52%;
 }
 .ordered_product_img{
     object-fit: contain;

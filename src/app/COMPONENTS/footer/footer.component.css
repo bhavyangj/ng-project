@@ -2,9 +2,10 @@ footer{
     background-color: #232f3e;
     color: white;
     text-align: center;
-    height: 25px;
-    position:fixed;
-    bottom:0;
+    height: max-content;
+    padding: 10px;
+    /* position:fixed; */
+    /* margin-bottom: 0; */
     width: 100%;
 }
 footer > p{

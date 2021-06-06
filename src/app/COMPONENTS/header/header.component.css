@@ -53,6 +53,9 @@
     align-items: center;
     border-radius: 0px 20px 20px 0px;
 }
+#searchbtn:hover{
+    cursor: pointer;
+}
 .header_menu_logo{
     object-fit: contain;
     display: flex;
