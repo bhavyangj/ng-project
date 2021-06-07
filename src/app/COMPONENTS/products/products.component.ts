@@ -43,6 +43,7 @@ export class ProductsComponent implements OnInit {
     this.thumbLabel = true;
     this.searchText = "";
     this.value = 0;
+    this.clearcategory()
   }
 
   // openSnackBar(str) {

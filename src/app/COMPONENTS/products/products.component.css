@@ -28,14 +28,17 @@ img{
     align-items: center;
 }
 #defaultbtn{
-  background-color: #232f3e;
+  /* background-color: #232f3e; */
+  color: #232f3e;
+  font-weight: 800;
   padding: 3px 0 0 2px;
   border: none;
   border-radius: 10px;
   margin-left: 165px;
 }
 #defaultbtn:hover{
-  color: #7bd651;
+  cursor: pointer;
+  color: #439e19;
 }
 /* .product > mat-card > button{
     margin-top: 10px;
