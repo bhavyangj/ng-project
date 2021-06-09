@@ -31,6 +31,10 @@ import { AdminComponent } from './PAGES/admin/admin.component';
 import { AddProductComponent } from './COMPONENTS/Admin/add-product/add-product.component';
 import { UpdateProductComponent } from './COMPONENTS/Admin/update-product/update-product.component';
 import { ViewProductsComponent } from './COMPONENTS/Admin/view-products/view-products.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgxSpinnerModule } from "ngx-spinner";
+import { ToastrModule } from 'ngx-toastr';
+
 
 
 
@@ -62,15 +66,22 @@ import { ViewProductsComponent } from './COMPONENTS/Admin/view-products/view-pro
     BrowserModule,
     AppRoutingModule,
     MatIconModule,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule, // required animations module
     MatCardModule,
     FormsModule,
     MatSliderModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxSpinnerModule,
+    ToastrModule.forRoot({
+      timeOut: 5000,
+      progressBar: true,
+      positionClass: 'toast-bottom-left'
+    })
   ],
   providers: [
     HeaderComponent
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -23,7 +23,7 @@
                 <div class="card-body">
                     <form>
                         <!-- <div class="range"> -->
-                            <p>Price Range:</p>
+                        <p>Price Range:</p>
                         <!-- </div> -->
                         <!-- <span style="right:0">set to default</span> -->
                         <div class="range">
@@ -107,29 +107,35 @@
                 <div class="card-body">
                     <p (click)="selectall()" style="cursor: pointer">Clear selection</p>
                     <input type="checkbox" [(ngModel)]="filter.electronics" (ngModelChange)="filterCategory()"
-                        id="Category" name="Category" placeholder="Electronics">&nbsp; Electronics
+                        class="category_input" name="Category" placeholder="Electronics">&nbsp; Electronics
                     <br><input type="checkbox" [(ngModel)]="filter.books" (ngModelChange)="filterCategory()"
-                        id="Category" name="Category">&nbsp; Books
+                        class="category_input" name="Category">&nbsp; Books
                     <br><input type="checkbox" [(ngModel)]="filter.computers" (ngModelChange)="filterCategory()"
-                        id="Category" name="Category">&nbsp; Computers
+                        class="category_input" name="Category">&nbsp; Computers
                     <br><input type="checkbox" [(ngModel)]="filter.fashion" (ngModelChange)="filterCategory()"
-                        id="Category" name="Category">&nbsp; Fashion
+                        class="category_input" name="Category">&nbsp; Fashion
                     <br><input type="checkbox" [(ngModel)]="filter.mobiles" (ngModelChange)="filterCategory()"
-                        id="Category" name="Category">&nbsp; Mobiles
+                        class="category_input" name="Category">&nbsp; Mobiles
                     <br><input type="checkbox" [(ngModel)]="filter.beauty" (ngModelChange)="filterCategory()"
-                        id="Category" name="Category">&nbsp; Beauty
+                        class="category_input" name="Category">&nbsp; Beauty
                     <!-- <br><input type="checkbox" [(ngModel)]="filter.mens" (ngModelChange)="filterCategory()" id="Category" name="Category" >&nbsp; Home & Kichen -->
                 </div>
             </div>
         </article>
     </div>
-    <div class="col products" *ngIf="searchproducts?.length == 0; else searchresult">
+
+    <div class="col products" style="position: relative;" *ngIf="searchproducts?.length == 0; else searchresult">
         <!-- <ng-template *ngIf="this.searchproducts.length!=0; else searchblock"> -->
         <!-- <ng-template > -->
+        <!-- <ngx-spinner></ngx-spinner> -->
+        <ngx-spinner [fullScreen]="false" bdOpacity=0 bdColor="transparent" size="large" color="#232f3e"
+            type="ball-scale-multiple">
+            <p style="font-size: 20px; color: #232f3e">Loading...</p>
+        </ngx-spinner>
         <div class="product" *ngFor="let item of filteredProducts">
-            <mat-card *ngIf="item.ratings>=rating && item.price>=min && max>=item.price">
+            <mat-card *ngIf="visibility && item.ratings>=rating && item.price>=min && max>=item.price">
                 <img src={{item.image}}>
-                <a (click)="onClick(item)">{{item.title}}</a>
+                <a class="item_title" (click)="onClick(item)">{{item.title}}</a>
                 <p>Price: ₹ <strong>{{item.price}}</strong></p>
                 <p>rating: <strong>{{item.ratings}}</strong></p>
                 <button class="button" id="addtocartbtn" (click)="addToCart(item)"><span>Add to cart</span></button>
@@ -146,11 +152,15 @@
 
     </div>
     <ng-template #searchresult>
-        <div class="col products" >
+        <div class="col products">
+            <ngx-spinner [fullScreen]="false" bdOpacity=0 bdColor="transparent" size="large" color="#232f3e"
+                type="ball-scale-multiple">
+                <p style="font-size: 20px; color: #232f3e">Loading...</p>
+            </ngx-spinner>
             <div class="product" *ngFor="let item of searchproducts">
-                <mat-card *ngIf="item.ratings>=rating && item.price>=min && max>=item.price">
+                <mat-card *ngIf="visibility && item.ratings>=rating && item.price>=min && max>=item.price">
                     <img src={{item.image}}>
-                    <a (click)="onClick(item)">{{item.title}}</a>
+                    <a class="item_title" (click)="onClick(item)">{{item.title}}</a>
                     <p>Price: ₹ <strong>{{item.price}}</strong></p>
                     <p>rating: <strong>{{item.ratings}}</strong></p>
                     <button class="button" (click)="addToCart(item)"><span>Add to cart</span></button>

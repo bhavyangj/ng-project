@@ -2,8 +2,9 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ShoppingCartService } from '../../SERVICES/shopping-cart.service'
 import { WishlistService } from 'src/app/SERVICES/wishlist.service';
 import { Router } from '@angular/router';
+import { AppComponent } from '../../app.component'
 import { HeaderComponent } from 'src/app/COMPONENTS/header/header.component';
-// import {MatSnackBar} from '@angular/material/snack-bar';
+import { NgxSpinnerService } from "ngx-spinner";
 
 @Component({
   selector: 'app-products',
@@ -17,10 +18,7 @@ export class ProductsComponent implements OnInit {
   rating: number;
   categoryName: string;
   searchText: string;
-  // @Input() filters: FilterComponent;
-  // filter: FilterComponent;
-  // rating=this.filter.rating;
-  // durationInSeconds = 5;
+  visibility: boolean = true
   max: number;
   min: number;
   step: number;
@@ -28,11 +26,12 @@ export class ProductsComponent implements OnInit {
   value: number;
 
   constructor(
+    private spinner: NgxSpinnerService,
     public shopping_cart: ShoppingCartService,
     public wishlist: WishlistService,
     public header: HeaderComponent,
     private router: Router,
-    // private _snackBar: MatSnackBar
+    public app: AppComponent
   ) {
     this.searchproducts = [];
     this.categoryName = "all";
@@ -46,21 +45,22 @@ export class ProductsComponent implements OnInit {
     this.clearcategory()
   }
 
-  // openSnackBar(str) {
-  //   this._snackBar.open(str);
-  // }
-
   ngOnInit(): void {
+    this.spinner.show();
     setTimeout(() => {
       this.filterCategory()
-    }, 10);
-    console.log("in ngonit search: ", this.searchText)
-    console.log("in ngonit search products: ", this.searchproducts)
-    // this.rating = this.filter.rating 
+      this.spinner.hide();
+    }, 2000);
   }
 
   setrating(num) {
     this.rating = num
+    this.visibility = false
+    this.spinner.show();
+    setTimeout(() => {
+      this.spinner.hide();  
+      this.visibility = true
+    }, 800);
   }
 
   filterSearch() {
@@ -120,14 +120,24 @@ export class ProductsComponent implements OnInit {
 
 
   addToCart(p) {
-    this.shopping_cart.addProduct(p)
-    alert("Product added to cart")
-    // this.openSnackBar("Product added to cart")
+    let items = this.shopping_cart.getCartItems()
+    if(!items.some((item)=> item.id == p.id)){
+      this.shopping_cart.addProduct(p)
+      this.app.showSuccess("Product added to cart")
+    }
+    else{
+      this.app.showError("Product already available in cart")
+    }
   }
   addToWishlist(p) {
-    alert("Product added to wishlist")
-    this.wishlist.addProduct(p)
-    // this.openSnackBar("Product added to wishlist")
+    let items = this.wishlist.getWishlistItems()
+    if(!items.some((item)=> item.id == p.id)){
+      this.wishlist.addProduct(p)
+      this.app.showSuccess("Product added to wishlist")
+    }
+    else{
+      this.app.showError("Product already available in wishlist")
+    }
   }
 
   //move to product detail page

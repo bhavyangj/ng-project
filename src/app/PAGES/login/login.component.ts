@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AppComponent } from '../../app.component'
 
 @Component({
   selector: 'app-login',
@@ -10,9 +11,10 @@ export class LoginComponent implements OnInit {
 
   auth: string = '';
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, public app: AppComponent) { }
 
   ngOnInit(): void {
+    this.app.showInfo("Select login type and login")
   }
   selectauth(event:any){
     this.auth = event.target.value;
@@ -24,7 +26,7 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/home'])
     }
     else{
-      alert("please select login type!")
+      this.app.showError("please select login type!")
     }
   }
 

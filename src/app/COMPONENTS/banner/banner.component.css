@@ -7,3 +7,13 @@
     z-index: -1;
     opacity: .8;
 }
+.visibility_icon{
+    position:absolute;
+    right: 10px;
+    top: auto;
+    z-index: 2;
+}
+.visibility_icon:hover{
+    cursor: pointer;
+    color:#7bd651;
+}

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'localstore';
+  constructor(private toastr: ToastrService){
 
+  }
+  showSuccess(str) {
+    this.toastr.success(str);
+  }
+  showError(str) {
+    this.toastr.error(str);
+  }
+  showInfo(str) {
+    this.toastr.info(str);
+  }
 }

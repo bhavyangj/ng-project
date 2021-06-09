@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from '../../app.component'
 import { ApiService } from '../../SERVICES/api.service'
 
 @Component({
@@ -9,14 +10,15 @@ import { ApiService } from '../../SERVICES/api.service'
 export class HomeComponent implements OnInit {
   items: any[];
 
-  constructor(private api: ApiService) { }
+  constructor(private api: ApiService, public app: AppComponent) { }
 
   ngOnInit(): void {
     this.getProducts()
     setTimeout(() => {
       localStorage.setItem("All Products", JSON.stringify(this.items))
-    }, 100);
+    }, 1000);
   }
+
   getProducts() {
     this.api.getJson().subscribe(resp => {
       this.items = resp

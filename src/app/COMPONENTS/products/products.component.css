@@ -16,6 +16,9 @@ img{
     height: 200px;
     width: 200px;
 }
+.product > mat-card > img:hover{
+  cursor: pointer;
+}
 .product > mat-card{
     display: flex;
     flex-direction: column;
@@ -29,7 +32,7 @@ img{
 }
 #defaultbtn{
   /* background-color: #232f3e; */
-  color: #232f3e;
+  color: #e9ebec;
   font-weight: 800;
   padding: 3px 0 0 2px;
   border: none;
@@ -38,7 +41,7 @@ img{
 }
 #defaultbtn:hover{
   cursor: pointer;
-  color: #439e19;
+  color: #7bd651;
 }
 /* .product > mat-card > button{
     margin-top: 10px;
@@ -100,20 +103,21 @@ img{
   flex-direction: column;
 }
 .range_input{
-  border: 1px solid #7bd651;
+  border: 1px solid #232f3e;
   margin: 0 10px;
   border-radius: 5px;
   width: 70%;
 }
 .search_input{
-  border: 1px solid #7bd651;
+  border: 1px solid #232f3e;
   border-radius: 5px;
   width: 70%;
 }
 .search_input:active{
-  border: 1px solid #232f3e;
+  border: 1px solid #7bd651;
 }
 .viewall:hover{
+  cursor: pointer;
   color: #232f3e;
   font-weight: 700;
 }
@@ -136,15 +140,19 @@ img{
   /* opacity: 80%; */
   padding:0;
   /* border: .5px solid rgb(170, 166, 166); */
-  border: .5px solid #7bd651;
+  border: .5px solid #232f3e;
   margin: 18px 0 0 30px;
 }
 .card-header{
-  background-color: #c0e0b2;
+  background-color: #232f3e;
+  color: #FFFFFF;
 }
 img{
   height: min-content;
   width: min-content;
+}
+img:hover{
+  cursor: pointer;
 }
 .group-selection{
   display: flex;
@@ -153,5 +161,11 @@ img{
 .clearcategory:hover{
   cursor: pointer;
   color: #7bd651;
-
+}
+.category_input:focus{
+  cursor: pointer;
+}
+/* ======================= mat-card ========================== */
+mat-card > a:hover{
+  cursor: pointer;
 }

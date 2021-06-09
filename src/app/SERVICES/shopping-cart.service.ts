@@ -10,7 +10,6 @@ export class ShoppingCartService {
   
   getCartItems=()=>{
     let items = localStorage.getItem('shopping_cart')
-    // console.log("items: ", items)
     return JSON.parse(items)
   }
 
