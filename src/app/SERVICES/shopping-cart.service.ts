@@ -36,12 +36,12 @@ export class ShoppingCartService {
   }
 
   removerItem=( product )=>{
-    console.log('calling remover ', product)
+    // console.log('calling remover ', product)
     let items = this.getCartItems();
     
     const index = items.findIndex(item=> item.id == product.id);
     if(index>=0){
-      console.log('hitting if')
+      // console.log('hitting if')
       items.splice(index, 1);
       return localStorage.setItem('shopping_cart', JSON.stringify(items))
     }

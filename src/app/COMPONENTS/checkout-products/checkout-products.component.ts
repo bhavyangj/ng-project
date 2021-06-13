@@ -60,6 +60,7 @@ export class CheckoutProductsComponent implements OnInit {
       p.quantity += 1;
       localStorage.setItem("shopping_cart", JSON.stringify(this.checkout_products));
       localStorage.setItem("Products", JSON.stringify(this.checkout_products));
+      localStorage.setItem("All Products", JSON.stringify(this.checkout_products));
       console.log("Product quantity updated: ", p.quantity)
       // this.shopping_cart_service.addProduct(p)
       // this.shopping_cart_service.total += p.price;
@@ -75,6 +76,7 @@ export class CheckoutProductsComponent implements OnInit {
       p.quantity -= 1;
       localStorage.setItem("shopping_cart", JSON.stringify(this.checkout_products));
       localStorage.setItem("Products", JSON.stringify(this.checkout_products));
+      localStorage.setItem("All Products", JSON.stringify(this.checkout_products));
       console.log("Product quantity updated: ", p.quantity)
       // this.shopping_cart_service.total -= p.price;
       // this.shopping_cart_service.removertoTotal(p)

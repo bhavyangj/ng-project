@@ -1,39 +1,19 @@
-<div class="row">
-  <div class="col-1 vertical-menu">
-    <a routerLink="/admin" class="active">Admin</a>
-    <a routerLink="/admin/add-product">Add Product</a>
-    <a routerLink="/admin/view-products">View Products</a>
-    <a routerLink="/admin/update-product">Update product</a>
-    <a routerLink="/admin/delete-product">Delete Product</a>
-  </div>
-  <div class="col">
-    <div class="products">
-      <table>
-        <tr>
-          <th>title</th>
-          <th>Category</th>
-          <th>price</th>
-          <th>Controls</th>
-        </tr>
-        <!-- <div class="product" *ngFor="let item of myproducts"> -->
-        <tr class="product" *ngFor="let item of myproducts">
-          <td>{{item.title}}</td>
-          <td>{{item.category}}</td>
-          <td>{{item.price}}</td>
-          <td>
-            <button class="button" id="updatebtn"><span>Update</span></button>
-            <button class="button" id="deletebtn"><span>Delete</span></button>
-          </td>
-        </tr>
-
-        <!-- <img src={{item.image}}>
-          <a (click)="onClick(item)">{{item.title}}</a>
-          <p>Price: ₹ <strong>{{item.price}}</strong></p>
-          <p>rating: <strong>{{item.ratings}}</strong></p> -->
-        <!-- <button class="button" (click)="addToCart(item)"><span>Add to cart</span></button>
-              <button class="button" (click)="addToWishlist(item)"><span>Add to wishlist</span></button> -->
-        <!-- </div> -->
-      </table>
-    </div>
-  </div>
+<div class="products">
+  <table>
+    <tr>
+      <th>title</th>
+      <th>Category</th>
+      <th>price</th>
+      <th>Controls</th>
+    </tr>
+    <tr class="product" *ngFor="let item of items">
+      <td>{{item.title}}</td>
+      <td>{{item.category}}</td>
+      <td>{{item.price}}</td>
+      <td>
+        <button class="button" id="updatebtn"><span>Update</span></button>
+        <button class="button" id="deletebtn" (click)="onDelete(item)"><span>Delete</span></button>
+      </td>
+    </tr>
+  </table>
 </div>

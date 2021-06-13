@@ -5,16 +5,72 @@
             <div class="col-5">
                 <img class="product-img" src="{{item.image}}" alt="...">
             </div>
-            <div class="col-5">
-                <div class="container my-3">
-                    
-                    <h4 class="card-title">{{item.title}}</h4>
-                    <div>price:  ₹ <strong>{{item.price}}</strong></div>
-                    <p>
-                        {{item.desc}}
-                    </p>
-                    <a RouterLink="/" class="btn btn-primary">Add to Cart</a>
-                </div>
+            <div class="flex col">
+                <table>
+                    <tr>
+                        <th>
+                            <p class="card-title">{{item.title}}</p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>Price: ₹ <strong>{{item.price}}</strong></div><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                {{item.desc}}
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="rating flex">
+                                Rating:&nbsp;
+                                <mat-icon>star</mat-icon>
+                                <mat-icon>star</mat-icon>
+                                <mat-icon>star</mat-icon>
+                                <mat-icon>star</mat-icon>
+                                <mat-icon>star_border</mat-icon>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button RouterLink="/" class="button">Wishlist</button>
+                            <button RouterLink="/" class="button">Add to Cart</button>
+                        </td>
+                    </tr>
+                    <!-- <tr>
+                        <td>
+                            <br><strong>Available offers:</strong>
+                            <br><strong id="offer">Special Price</strong> Get extra 6% off (price inclusive of discount)
+                            <a href="">T&C</a>
+                            <br><strong id="offer">Bank Offer</strong> 5% Unlimited Cashback on Shop Credit Card <a
+                                href="">T&C</a>
+                            <br><strong id="offer">Bank Offer</strong> Flat ₹100 off on first Shop Pay Later order of
+                            ₹500 and above <a href="">T&C</a>
+                            <br>No Cost EMI on Shop Credit Card <a href="">T&C</a>
+                        </td>
+                    </tr> -->
+                    <tr>
+                        <td>
+                            <br><strong>Services:</strong>
+                            <br><a href="#">Usually delivered in 3 days</a><br>
+                            <a href="#">30 Day Return Policy</a>
+                            <br>
+                            <a href="#">Cash on Delivery available</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br><strong>Rating & Reviews:</strong>
+                            <br>No Reviews yet.
+                        </td>
+                    </tr>
+                </table>
             </div>
         </ng-container>
     </div>

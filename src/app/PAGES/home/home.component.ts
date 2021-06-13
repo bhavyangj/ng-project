@@ -20,8 +20,9 @@ export class HomeComponent implements OnInit {
   }
 
   getProducts() {
-    this.api.getJson().subscribe(resp => {
-      this.items = resp
-    })
+    // this.api.getJson().subscribe(resp => {
+    //   this.items = resp
+    // })
+    this.items = JSON.parse(localStorage.getItem('All Products'))
   }
 }

@@ -34,6 +34,7 @@ import { ViewProductsComponent } from './COMPONENTS/Admin/view-products/view-pro
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { ToastrModule } from 'ngx-toastr';
+import { DeleteProductsComponent } from './COMPONENTS/Admin/delete-products/delete-products.component';
 
 
 
@@ -61,6 +62,7 @@ import { ToastrModule } from 'ngx-toastr';
     AddProductComponent,
     UpdateProductComponent,
     ViewProductsComponent,
+    DeleteProductsComponent,
   ],
   imports: [
     BrowserModule,

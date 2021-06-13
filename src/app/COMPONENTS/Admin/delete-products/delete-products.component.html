@@ -1,0 +1,23 @@
+<div class="products">
+    <table *ngIf="items.length!=0; else elseblock">
+        <h3>Deleted Items</h3>
+        <tr>
+            <th>title</th>
+            <th>Category</th>
+            <th>price</th>
+            <th>Controls</th>
+        </tr>
+        <tr class="product" *ngFor="let item of items">
+            <td>{{item.title}}</td>
+            <td>{{item.category}}</td>
+            <td>{{item.price}}</td>
+            <td>
+                <button class="button" id="deletebtn" (click)="onRestore(item)"><span>Restore</span></button>
+                <button class="button" id="deleteperbtn"><span>Delete</span></button>
+            </td>
+        </tr>
+    </table>
+    <ng-template #elseblock>
+        <h3>No results found!</h3>
+    </ng-template>
+</div>

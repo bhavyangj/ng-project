@@ -10,6 +10,9 @@ export class AdminComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+    let item = JSON.parse(localStorage.getItem('All Products'))
+    // console.log("----",item)
   }
 
 }

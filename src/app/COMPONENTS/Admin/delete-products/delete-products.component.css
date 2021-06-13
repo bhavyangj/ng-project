@@ -1,3 +1,4 @@
+
   table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -34,14 +35,16 @@
     position: relative;
     transition: 0.5s;
   }
-  #updatebtn span:after{
+  #deleteperbtn span:after{
     content: '\21EA';
+    /* width: 100%; */
   }
   #deletebtn span:after{
     /* content: '\2297'; */
     /* content: '\2573'; */
     content: '\2718';
   }
+
   .button span:after {
     /* content: '\007F'; */
     position: absolute;

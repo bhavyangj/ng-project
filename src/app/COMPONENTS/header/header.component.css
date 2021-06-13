@@ -130,7 +130,6 @@
     border-radius: 10px;
 }
 .header_bottom_category:hover{
+    cursor: pointer;
     color: #7bd651;
-    background-color: #303842;
-    margin: auto 15px;
 }
