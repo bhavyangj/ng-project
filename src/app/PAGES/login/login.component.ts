@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProducts()
-    this.app.showInfo("Select login type and login")
+    // this.app.showInfo("Select login type and login" )
   }
 
   getProducts(){
@@ -27,8 +27,25 @@ export class LoginComponent implements OnInit {
       this.items = resp
     })
     setTimeout(() => {
-      localStorage.setItem("All Products", JSON.stringify(this.items))
-      localStorage.setItem("Delete", JSON.stringify(null))
+      if(localStorage.getItem("All Products") === null) {
+        localStorage.setItem('All Products', JSON.stringify(this.items))
+      }
+      
+      if (localStorage.getItem("Delete") === null) {
+        localStorage.setItem('Delete', JSON.stringify([]))
+      }
+
+      if (localStorage.getItem("wishlist") === null) {
+        localStorage.setItem('wishlist', JSON.stringify([]))
+      }
+
+      if (localStorage.getItem("placed_items") === null) {
+        localStorage.setItem('placed_items', JSON.stringify([]))
+      }
+
+      if (localStorage.getItem("shopping_cart") === null) {
+        localStorage.setItem('shopping_cart', JSON.stringify([]))
+      }
     }, 100);
   }
 

@@ -42,25 +42,26 @@ export class CheckoutProductsComponent implements OnInit {
   }
   OrderItems() {
     console.log('check out: ', this.checkout_products)
-    for (var product of this.checkout_products) {
-      console.log('products is going for check out: ', product)
-      this.orderPlaced(product);
+    if (confirm('Are you sure to checkout ?')) {
+      for (var product of this.checkout_products) {
+        console.log('products is going for check out: ', product)
+        this.orderPlaced(product);
+      }
     }
-    alert('list moved')
   }
 
   IncQuantity(p) {
-    console.log("p.quan: ", p.quantity)
-    var cart_items = JSON.parse(localStorage.getItem("shopping_cart"));
+    // console.log("p.quan: ", p.quantity)
+    // var cart_items = JSON.parse(localStorage.getItem("shopping_cart"));
     // Change value
-    
+
     // Save the new item with updated value
     if (p.quantity != 5) {
       // cart_items[p.id].quantity += 1;
       p.quantity += 1;
       localStorage.setItem("shopping_cart", JSON.stringify(this.checkout_products));
-      localStorage.setItem("Products", JSON.stringify(this.checkout_products));
-      localStorage.setItem("All Products", JSON.stringify(this.checkout_products));
+      // localStorage.setItem("Products", JSON.stringify(this.checkout_products));
+      // localStorage.setItem("All Products", JSON.stringify(this.checkout_products));
       console.log("Product quantity updated: ", p.quantity)
       // this.shopping_cart_service.addProduct(p)
       // this.shopping_cart_service.total += p.price;
@@ -75,8 +76,8 @@ export class CheckoutProductsComponent implements OnInit {
       // this.shopping_cart_service.removerItem(p)
       p.quantity -= 1;
       localStorage.setItem("shopping_cart", JSON.stringify(this.checkout_products));
-      localStorage.setItem("Products", JSON.stringify(this.checkout_products));
-      localStorage.setItem("All Products", JSON.stringify(this.checkout_products));
+      // localStorage.setItem("Products", JSON.stringify(this.checkout_products));
+      // localStorage.setItem("All Products", JSON.stringify(this.checkout_products));
       console.log("Product quantity updated: ", p.quantity)
       // this.shopping_cart_service.total -= p.price;
       // this.shopping_cart_service.removertoTotal(p)

@@ -19,7 +19,7 @@ export class ViewProductsComponent implements OnInit {
       this.getProducts()
       // localStorage.setItem("All Products", JSON.stringify(this.items))
       console.log("items: ", this.items)
-    }, 1000);
+    }, 100);
   }
   
   getProducts() {

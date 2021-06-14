@@ -21,6 +21,7 @@
                     <mat-icon>lock</mat-icon>
                     <input type="password" placeholder="Enter Password">
                 </div>
+                <p *ngIf="auth == '' || auth =='Select Login As'">Please Select Login Type!</p>
                 <button class="button" (click)="login()"><span>Login</span></button>
                 <!-- <button class="button" routerLink="/"><span>Login as User</span></button>
                 <button class="button" routerLink="/admin"><span>Login as Admin</span></button> -->

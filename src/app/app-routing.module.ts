@@ -29,7 +29,6 @@ const routes: Routes = [
   {path:'complete-checkout', component: CompleteCheckoutComponent},
   {path:'product-detail/:id', component: ProductDetailComponent},
   
-  // {path:'admin', component: AdminComponent},
   {
     path:'admin', 
     component: AdminComponent,
@@ -41,6 +40,10 @@ const routes: Routes = [
       {
         path: 'view-products',
         component: ViewProductsComponent,
+      },
+      {
+        path: 'update-product',
+        component: UpdateProductComponent,
       },
       {
         path: 'delete-products',

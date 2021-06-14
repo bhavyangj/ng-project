@@ -3,6 +3,7 @@ import { ShoppingCartService } from 'src/app/SERVICES/shopping-cart.service';
 import { WishlistService } from 'src/app/SERVICES/wishlist.service';
 import { AppComponent } from '../../app.component';
 import { Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 
 @Component({
@@ -18,9 +19,11 @@ export class HeaderComponent implements OnInit {
     public shoppingCart: ShoppingCartService, 
     public wishlist: WishlistService,
     public app: AppComponent,
+    private spinner: NgxSpinnerService,
     private router: Router,) { }
 
   ngOnInit(): void {
+    // this.spinner.hide();
   }
   searchGo(){
     console.log("search: ", this.searchText)
@@ -30,18 +33,11 @@ export class HeaderComponent implements OnInit {
     this.searchState = false
   }
   login(){
-    this.app.showInfo("logging out...")
+    // this.spinner.show();
     setTimeout(() => {
+      // this.spinner.hide();
       this.router.navigate(['/login'])
-    }, 5000);
+    }, 1000);
   }
-  // transform(items: any[], searchText: string): any[] {
-  //   if(!items) return [];
-  //   if(!searchText) return items;
-    
-  //   searchText = searchText.toLowerCase();
-  //       return items.filter( it => {
-  //         return it.name.toLowerCase().includes(searchText);
-  //       });
-  //  }
+  
 }

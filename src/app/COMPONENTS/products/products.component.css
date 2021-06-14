@@ -89,6 +89,9 @@ img{
   transition: 0.5s;
 }
 
+.button:hover{
+  cursor: pointer;
+}
 .button:hover span {
   padding-right: 25px;
   color: #7bd651;
@@ -162,7 +165,7 @@ img:hover{
   cursor: pointer;
   color: #7bd651;
 }
-.category_input:focus{
+.category_input:hover{
   cursor: pointer;
 }
 /* ======================= mat-card ========================== */
