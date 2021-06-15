@@ -41,7 +41,7 @@
     },
     {
         "id": 5,
-        "title": "Python Programming: Using Problem Solving Approach",
+        "title": "Python Programming",
         "category": "books",
         "desc": "Python Programming is designed as a textbook to fulfil the requirements of the first-level course in Python programming.",
         "quantity": 1,
@@ -121,7 +121,7 @@
     },
     {
         "id": 43,
-        "title": "Health and Personal Care - Thermometer",
+        "title": "Health and Personal Care",
         "category": "electronics",
         "desc": "Health & Personal Care Appliances",
         "quantity": 1,
@@ -171,7 +171,7 @@
     },
     {
         "id": 16,
-        "title": "Zebronics Wired Keyboard and Mouse Combo",
+        "title": "Zebronics Wired Keyboard and Mouse",
         "category": "computers",
         "desc": "Zebronics, FLAT RM 909J 9F TWO GRAND TOWER ,625 NATHAN ROAD KL HONG KONG",
         "quantity": 1,
@@ -191,7 +191,7 @@
     },
     {
         "id": 36,
-        "title": "D-Link DIR-2640, WiFi Router AC2600 MU-MIMO Dual Band",
+        "title": "D-Link WiFi Router Dual Band",
         "category": "computers",
         "desc": "Works with the Google Assistant and Alexa – voice control with Google assistant or Alexa lets you manage your network without lifting a finger",
         "quantity": 1,

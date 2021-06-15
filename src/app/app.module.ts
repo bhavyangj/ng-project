@@ -81,7 +81,8 @@ import { DeleteProductsComponent } from './COMPONENTS/Admin/delete-products/dele
     })
   ],
   providers: [
-    HeaderComponent
+    HeaderComponent,
+    LoginComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
