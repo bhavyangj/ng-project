@@ -12,10 +12,9 @@
                         <option value="User">User</option>
                     </select>
                 </div>
-                <!-- <p><span>You selected: </span><b>{{auth}}</b></p> -->
                 <div class="row">
                     <mat-icon>person</mat-icon>
-                    <input type="text" placeholder="Enter Username">
+                    <input type="text" placeholder="Enter Username" name="user" [(ngModel)]="username" (change)="changeUser()">
                 </div>
                 <div class="row">
                     <mat-icon>lock</mat-icon>
@@ -28,8 +27,4 @@
             </form>
         </div>
     </div>
-    <!-- <div class="inner">
-        <div class="photo">
-        </div>
-    </div> -->
 </div>

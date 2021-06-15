@@ -73,7 +73,7 @@
 
 .header_menu_signin{
     display: flex;
-    width: 70px;
+    width: 90px;
     flex-direction: column;
 }
 .header_menu_top_item{
@@ -135,4 +135,8 @@
 .header_bottom_category:hover{
     cursor: pointer;
     color: #7bd651;
+}
+#city{
+    font-size: 16px;
+
 }

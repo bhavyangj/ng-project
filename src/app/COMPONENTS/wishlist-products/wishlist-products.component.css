@@ -1,6 +1,9 @@
 .price{
     /* align-items: right; */
     text-align: right;
+    margin-right: 35px;
+    font-size: 20px;
+
 }
 .wishlist_product{
     border-top: solid 1px rgb(219, 218, 218);

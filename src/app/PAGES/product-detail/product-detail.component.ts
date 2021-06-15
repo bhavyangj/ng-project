@@ -21,18 +21,14 @@ export class ProductDetailComponent implements OnInit {
     this._route.params.forEach((params) => {
       this.bindId = params["id"]
     })
+    // for(let i=0; i<=this.products.length; i++){
+      
+    // }
 
     console.log("Bid id : ",this.bindId)
     // this.getProductDetails()
   }
-  // onclick(item,products){
-  //   console.log("item:", item)
-  //   console.log("Products : ",products)
-  // }
-
-  // getProducts(){
-  //   this.products = localStorage.getItem('Products')
-  // }
+  
   getProducts =()=>{
     let items = this.getProductItems();
     this.products = items

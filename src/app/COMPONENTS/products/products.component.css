@@ -37,7 +37,7 @@ img{
   padding: 3px 0 0 2px;
   border: none;
   border-radius: 10px;
-  margin-left: 165px;
+  margin-left: auto;
 }
 #defaultbtn:hover{
   cursor: pointer;
@@ -147,6 +147,8 @@ img{
   margin: 18px 0 0 30px;
 }
 .card-header{
+  display: flex;
+  flex-direction: row;
   background-color: #232f3e;
   color: #FFFFFF;
 }
@@ -165,6 +167,10 @@ img:hover{
   cursor: pointer;
   color: #7bd651;
 }
+.category_input:active{
+  color: #232f3e;
+}
+
 .category_input:hover{
   cursor: pointer;
 }

@@ -12,12 +12,12 @@
         </div>
       </div>
       <div (click)="login()" class="header_menu_signin">
-        <span class="header_menu_top_item">Hello, User</span>
-        <span class="header_menu_bottom_item">Accounts</span>
+        <span class="header_menu_top_item">Hello, {{username}}</span>
+        <span class="header_menu_bottom_item">Logout</span>
       </div>
       <div routerLink="/your-orders" class="header_menu_signin">
-        <span class="header_menu_top_item">Returns</span>
-        <span class="header_menu_bottom_item">& Orders</span>
+        <span class="header_menu_top_item">Returns &</span>
+        <span class="header_menu_bottom_item">Orders</span>
       </div>
       <div routerLink="/wishlist" class="header_menu_cart">
         <span class="header_menu_bottom_item wishlist">
@@ -36,7 +36,7 @@
   <nav class="header_bottom">
     <div class="header_bottom_location_text">
       <span class="header_left_line_one">Delivery to</span>
-      <span class="header_left_line_two"> <Strong>Surat</Strong></span>
+      <span class="header_left_line_two"> <mat-icon id="city"> location_on</mat-icon><Strong>Surat</Strong></span>
     </div>
     <div class="header_bottom_category">
       <h4>Electronics</h4>

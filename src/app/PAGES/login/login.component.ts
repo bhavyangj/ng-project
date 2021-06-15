@@ -11,11 +11,13 @@ import { AppComponent } from '../../app.component'
 export class LoginComponent implements OnInit {
 
   auth: string = '';
+  username: string = '';
   items: any[] = [];
 
   constructor(private router: Router, 
     public app: AppComponent,
-    public api: ApiService) { }
+    public api: ApiService) {
+    }
 
   ngOnInit(): void {
     this.getProducts()
@@ -47,6 +49,11 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('shopping_cart', JSON.stringify([]))
       }
     }, 100);
+  }
+
+  changeUser(){
+    this.api.username = this.username
+    console.log(this.username)
   }
 
 

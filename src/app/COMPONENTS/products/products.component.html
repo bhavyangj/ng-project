@@ -27,9 +27,9 @@
                         <!-- </div> -->
                         <!-- <span style="right:0">set to default</span> -->
                         <div class="range">
-                            from: <input class="range_input" type="number" placeholder="value" name="from"
+                            From: <input class="range_input" type="number" placeholder="value" name="from"
                                 [(ngModel)]="min">
-                            to: <input class="range_input" type="number" placeholder="value" name="to"
+                            To: <input class="range_input" type="number" placeholder="value" name="to"
                                 [(ngModel)]="max">
                         </div>
                         <br>
@@ -48,7 +48,7 @@
                 <div class="card-body">
                     <form>
                         <div class="search">
-                            <input class="search_input" type="text" placeholder="find Products ..." name="from"
+                            <input class="search_input" type="text" placeholder="Find Products ..." name="from"
                                 [(ngModel)]="searchText" (ngModelChange)="searchGo()">
                         </div>
                     </form>
@@ -58,7 +58,7 @@
 
         <article class="card-group-item">
             <header class="card-header">
-                rating: {{this.rating}}+
+                Rating: {{this.rating}}+
             </header>
             <div class="filter-content">
                 <div class="card-body">
@@ -139,8 +139,7 @@
                 <p>Price: ₹ <strong>{{item.price}}</strong></p>
                 <p>rating: <strong>{{item.ratings}}</strong></p>
                 <button class="button" id="addtocartbtn" (click)="addToCart(item)"><span>Add to cart</span></button>
-                <button class="button" id="wishlistbtn" (click)="addToWishlist(item)"><span>Add to
-                        wishlist</span></button>
+                <button class="button" id="wishlistbtn" (click)="addToWishlist(item)"><span>Add to wishlist</span></button>
             </mat-card>
         </div>
         <!-- </ng-template> -->
